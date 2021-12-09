@@ -7,6 +7,7 @@ const path = require('path');
 const { resolve } = require('path');
 
 const publicDir = path.resolve(__dirname, 'public');
+const srcDir = path.resolve(__dirname, 'src');
 
 module.exports = (env, argv) => {
 	const { mode } = argv;
@@ -20,7 +21,7 @@ module.exports = (env, argv) => {
 		resolve: {
 			extensions: ['*', '.ts', '.tsx', '.js', 'jsx'],
 			alias: {
-				'@src': path.resolve(__dirname, 'src'),
+				'@': srcDir(),
 			},
 		},
 
@@ -74,6 +75,7 @@ module.exports = (env, argv) => {
 			static: {
 				directory: publicDir,
 			},
+
 			compress: true,
 			port: 9000,
 			hot: true,

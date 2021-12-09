@@ -1,6 +1,6 @@
 import '../css/style.css';
+import View from '@/view/mainView';
 
-// const $main = document.querySelector('.main');
 const $navToggle = document.querySelector('.nav-toggle');
 
 $navToggle?.addEventListener('change', (e) => {
@@ -9,3 +9,5 @@ $navToggle?.addEventListener('change', (e) => {
 	if (target.checked) document.body.style.overflow = 'hidden';
 	else document.body.style.overflow = 'visible';
 });
+
+View.getInstance();

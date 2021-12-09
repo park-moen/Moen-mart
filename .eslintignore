@@ -3,3 +3,4 @@ babel.config.js
 webpack.config.js
 server.js
 **/*.html
+index.d.ts

@@ -24,8 +24,8 @@
 		"noUnusedParameters": true,
 		"baseUrl": "./",
 		"paths": {
-			"@/src": ["src/*"]
+			"@/*": ["src/*"]
 		}
 	},
-	"include": ["src"]
+	"include": ["src", "index.d.ts"]
 }
